@@ -21,7 +21,7 @@ const PrimeNumbersView = (): JSX.Element => {
       let isValid = true;
       if (Number.isNaN(upperBound)) {
         isValid = false;
-      } else if (Number.parseInt(upperBound) < 2) {
+      } else if (Number.parseInt(upperBound) < 3) {
         isValid = false;
       }
       return isValid;
@@ -54,7 +54,7 @@ const PrimeNumbersView = (): JSX.Element => {
           <TextField
             fullWidth
             error={invalidInput}
-            helperText={invalidInput?"Please enter a number greater than 1":""}
+            helperText={invalidInput?"Please enter a number greater than 2":""}
             id="upperBound"
             label="Number"
             type="text"
